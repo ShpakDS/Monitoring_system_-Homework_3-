@@ -1,0 +1,14 @@
+services:
+  php:
+    build: .
+    container_name: monitoring_system_php
+    working_dir: /var/www/html
+    environment:
+      - GA4_MEASUREMENT_ID=G-7ZXDHMHHC1
+      - GA4_API_SECRET=yyeq6TZATVi3ZQJj06RqIw
+    volumes:
+      - .:/var/www/html
+
+volumes:
+  app:
+    driver: local
